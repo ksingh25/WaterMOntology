@@ -1,0 +1,1515 @@
+@prefix : <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7> .
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#canAccess
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#canAccess> rdf:type owl:ObjectProperty ;
+                                                                                      
+                                                                                      rdfs:range <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Device> ;
+                                                                                      
+                                                                                      rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Staff> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#compose
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#compose> rdf:type owl:AsymmetricProperty ,
+                                                                                             owl:IrreflexiveProperty ,
+                                                                                             owl:ObjectProperty ,
+                                                                                             owl:TransitiveProperty ;
+                                                                                    
+                                                                                    rdfs:range <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Device> ;
+                                                                                    
+                                                                                    rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Device> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#concern
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#concern> rdf:type owl:ObjectProperty ;
+                                                                                    
+                                                                                    rdfs:range <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Device> ;
+                                                                                    
+                                                                                    rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Incident> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#energySupply
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#energySupply> rdf:type owl:ObjectProperty ;
+                                                                                         
+                                                                                         rdfs:range <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ElectricDevice> ;
+                                                                                         
+                                                                                         rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Generator> ;
+                                                                                         
+                                                                                         owl:inverseOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isEnergySuppliedBy> ;
+                                                                                         
+                                                                                         rdfs:subPropertyOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#supply> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasOrigin
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasOrigin> rdf:type owl:IrreflexiveProperty ,
+                                                                                               owl:ObjectProperty ;
+                                                                                      
+                                                                                      rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Measurement> ;
+                                                                                      
+                                                                                      rdfs:range <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Sensor> ;
+                                                                                      
+                                                                                      rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasTarget
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasTarget> rdf:type owl:ObjectProperty ;
+                                                                                      
+                                                                                      rdfs:range <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#DataCenter> ;
+                                                                                      
+                                                                                      rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Measurement> ;
+                                                                                      
+                                                                                      rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasUnit
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasUnit> rdf:type owl:ObjectProperty ;
+                                                                                    
+                                                                                    rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Measurement> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#induce
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#induce> rdf:type owl:ObjectProperty ;
+                                                                                   
+                                                                                   rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Incident> ;
+                                                                                   
+                                                                                   rdfs:range <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Intervention> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> rdf:type owl:AsymmetricProperty ,
+                                                                                                  owl:IrreflexiveProperty ,
+                                                                                                  owl:ObjectProperty ,
+                                                                                                  owl:TransitiveProperty ;
+                                                                                         
+                                                                                         owl:inverseOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#compose> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isEnergySuppliedBy
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isEnergySuppliedBy> rdf:type owl:ObjectProperty ;
+                                                                                               
+                                                                                               rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Generator> ;
+                                                                                               
+                                                                                               rdfs:range <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Generator> ;
+                                                                                               
+                                                                                               rdfs:subPropertyOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isSupliedBy> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isRealizedBy
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isRealizedBy> rdf:type owl:ObjectProperty ;
+                                                                                         
+                                                                                         rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Intervention> ;
+                                                                                         
+                                                                                         rdfs:range <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Staff> ;
+                                                                                         
+                                                                                         owl:inverseOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#realize> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isReportedBy
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isReportedBy> rdf:type owl:FunctionalProperty ,
+                                                                                                  owl:ObjectProperty ;
+                                                                                         
+                                                                                         rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Incident> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isResponsibleFor
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isResponsibleFor> rdf:type owl:ObjectProperty ;
+                                                                                             
+                                                                                             rdfs:range <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Device> ;
+                                                                                             
+                                                                                             rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Manager> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isSupliedBy
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isSupliedBy> rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isWaterSuppliedBy
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isWaterSuppliedBy> rdf:type owl:ObjectProperty ;
+                                                                                              
+                                                                                              rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterDevice> ;
+                                                                                              
+                                                                                              rdfs:range <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterDevice> ;
+                                                                                              
+                                                                                              rdfs:subPropertyOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isSupliedBy> ;
+                                                                                              
+                                                                                              owl:inverseOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#waterSupply> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#realize
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#realize> rdf:type owl:ObjectProperty ;
+                                                                                    
+                                                                                    rdfs:range <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Intervention> ;
+                                                                                    
+                                                                                    rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Staff> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#report
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#report> rdf:type owl:InverseFunctionalProperty ,
+                                                                                            owl:IrreflexiveProperty ,
+                                                                                            owl:ObjectProperty ;
+                                                                                   
+                                                                                   rdfs:range <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Incident> ;
+                                                                                   
+                                                                                   owl:inverseOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isReportedBy> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#respondTo
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#respondTo> rdf:type owl:ObjectProperty ;
+                                                                                      
+                                                                                      rdfs:range <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Incident> ;
+                                                                                      
+                                                                                      rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Intervention> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#solve
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#solve> rdf:type owl:ObjectProperty ;
+                                                                                  
+                                                                                  rdfs:range <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Incident> ;
+                                                                                  
+                                                                                  rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Intervention> ;
+                                                                                  
+                                                                                  owl:inverseOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#induce> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#supply
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#supply> rdf:type owl:IrreflexiveProperty ,
+                                                                                            owl:ObjectProperty ;
+                                                                                   
+                                                                                   owl:inverseOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isSupliedBy> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#waterSupply
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#waterSupply> rdf:type owl:IrreflexiveProperty ,
+                                                                                                 owl:ObjectProperty ,
+                                                                                                 owl:TransitiveProperty ;
+                                                                                        
+                                                                                        rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterDevice> ;
+                                                                                        
+                                                                                        rdfs:range <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterDevice> ;
+                                                                                        
+                                                                                        rdfs:subPropertyOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#supply> .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#InstallationDate
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#InstallationDate> rdf:type owl:DatatypeProperty ;
+                                                                                             
+                                                                                             rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Device> ;
+                                                                                             
+                                                                                             rdfs:range xsd:dateTime .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#altitude
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#altitude> rdf:type owl:DatatypeProperty ;
+                                                                                     
+                                                                                     rdfs:subPropertyOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#geographicCoordinates> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#consumption
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#consumption> rdf:type owl:DatatypeProperty ;
+                                                                                        
+                                                                                        rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Device> ;
+                                                                                        
+                                                                                        rdfs:range xsd:float .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#diameter
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#diameter> rdf:type owl:DatatypeProperty ;
+                                                                                     
+                                                                                     rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterDevice> ;
+                                                                                     
+                                                                                     rdfs:range xsd:float .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#electricConsumption
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#electricConsumption> rdf:type owl:DatatypeProperty ;
+                                                                                                
+                                                                                                rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ElectricDevice> ;
+                                                                                                
+                                                                                                rdfs:subPropertyOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#consumption> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#fuelConsumption
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#fuelConsumption> rdf:type owl:DatatypeProperty ;
+                                                                                            
+                                                                                            rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Generator> ;
+                                                                                            
+                                                                                            rdfs:subPropertyOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#consumption> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#geographicCoordinates
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#geographicCoordinates> rdf:type owl:DatatypeProperty ;
+                                                                                                  
+                                                                                                  rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Device> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasDate
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasDate> rdf:type owl:DatatypeProperty ;
+                                                                                    
+                                                                                    rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Measurement> ;
+                                                                                    
+                                                                                    rdfs:range xsd:dateTimeStamp .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasMaxValue
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasMaxValue> rdf:type owl:DatatypeProperty ;
+                                                                                        
+                                                                                        rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Sensor> ;
+                                                                                        
+                                                                                        rdfs:range owl:real .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasMinValue
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasMinValue> rdf:type owl:DatatypeProperty ;
+                                                                                        
+                                                                                        rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Sensor> ;
+                                                                                        
+                                                                                        rdfs:range owl:real .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasValue
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasValue> rdf:type owl:DatatypeProperty ;
+                                                                                     
+                                                                                     rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Measurement> ;
+                                                                                     
+                                                                                     rdfs:range xsd:float .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#lattitude
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#lattitude> rdf:type owl:DatatypeProperty ;
+                                                                                      
+                                                                                      rdfs:subPropertyOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#geographicCoordinates> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#longitude
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#longitude> rdf:type owl:DatatypeProperty ;
+                                                                                      
+                                                                                      rdfs:subPropertyOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#geographicCoordinates> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#rotationSpeed
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#rotationSpeed> rdf:type owl:DatatypeProperty ;
+                                                                                          
+                                                                                          rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Fan> ,
+                                                                                                      <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Pump> ;
+                                                                                          
+                                                                                          rdfs:range xsd:float .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#volume
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#volume> rdf:type owl:DatatypeProperty ;
+                                                                                   
+                                                                                   rdfs:domain <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Tank> .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Accelerator
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Accelerator> rdf:type owl:Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PumpingGroup> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#AirQualitySensor
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#AirQualitySensor> rdf:type owl:Class ;
+                                                                                             
+                                                                                             rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#AirSensor> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#AirSensor
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#AirSensor> rdf:type owl:Class ;
+                                                                                      
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#EnvironmentSensor> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Alert
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Alert> rdf:type owl:Class ;
+                                                                                  
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Incident> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Basin
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Basin> rdf:type owl:Class ;
+                                                                                  
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Reservoir> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Bladder
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Bladder> rdf:type owl:Class ;
+                                                                                    
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterDevice> ,
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                      owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Manometer> ;
+                                                                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                    ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Booster
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Booster> rdf:type owl:Class ;
+                                                                                    
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PumpingGroup> ,
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                      owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Bladder> ;
+                                                                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                    ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Claim
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Claim> rdf:type owl:Class ;
+                                                                                  
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Incident> ,
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isReportedBy> ;
+                                                                                                    owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Client> ;
+                                                                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                  ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Client
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Client> rdf:type owl:Class ;
+                                                                                   
+                                                                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#report> ;
+                                                                                                     owl:someValuesFrom <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Incident>
+                                                                                                   ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Collectivity
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Collectivity> rdf:type owl:Class ;
+                                                                                         
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Client> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ConsumableRenewal
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ConsumableRenewal> rdf:type owl:Class ;
+                                                                                              
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Intervention> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Controler
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Controler> rdf:type owl:Class ;
+                                                                                      
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterDevice> ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                        owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Flowmeter> ;
+                                                                                                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                      ] ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                        owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Manometer> ;
+                                                                                                        owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                                                                                      ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#DataCenter
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#DataCenter> rdf:type owl:Class ;
+                                                                                       
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ElectricDevice> ,
+                                                                                                       [ rdf:type owl:Restriction ;
+                                                                                                         owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#report> ;
+                                                                                                         owl:someValuesFrom <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Incident>
+                                                                                                       ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Device
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Device> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#DeviceBreakdownAlert
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#DeviceBreakdownAlert> rdf:type owl:Class ;
+                                                                                                 
+                                                                                                 rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#MalfunctionAlert> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#DeviceThermometer
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#DeviceThermometer> rdf:type owl:Class ;
+                                                                                              
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#EnvironmentSensor> ,
+                                                                                                              <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Thermometer> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#DomesticClient
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#DomesticClient> rdf:type owl:Class ;
+                                                                                           
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Client> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ElectricDevice
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ElectricDevice> rdf:type owl:Class ;
+                                                                                           
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Device> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ElectricDisruptAlert
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ElectricDisruptAlert> rdf:type owl:Class ;
+                                                                                                 
+                                                                                                 rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#MalfunctionAlert> ,
+                                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                                   owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#concern> ;
+                                                                                                                   owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ElectricDevice> ;
+                                                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                                 ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ElectricPowerageSensor
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ElectricPowerageSensor> rdf:type owl:Class ;
+                                                                                                   
+                                                                                                   rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#StateSensor> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ElectricStateSensor
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ElectricStateSensor> rdf:type owl:Class ;
+                                                                                                
+                                                                                                rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#StateSensor> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#EnergyUnit
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#EnergyUnit> rdf:type owl:Class ;
+                                                                                       
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#MeasureUnit> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#EnvironmentAlert
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#EnvironmentAlert> rdf:type owl:Class ;
+                                                                                             
+                                                                                             rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Alert> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#EnvironmentSensor
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#EnvironmentSensor> rdf:type owl:Class ;
+                                                                                              
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Sensor> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Fan
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Fan> rdf:type owl:Class ;
+                                                                                
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ElectricDevice> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#FireHydrant
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#FireHydrant> rdf:type owl:Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterDevice> ,
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                          owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Flowmeter> ;
+                                                                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                        ] ,
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                          owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#StateSensor> ;
+                                                                                                          owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                                                                                        ] ,
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                          owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Valve> ;
+                                                                                                          owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                                                                                        ] ,
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                          owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Manometer> ;
+                                                                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                        ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#FlowAlert
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#FlowAlert> rdf:type owl:Class ;
+                                                                                      
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterAlert> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#FlowLimiter
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#FlowLimiter> rdf:type owl:Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Controler> ,
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                          owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Flowmeter> ;
+                                                                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                        ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#FlowMeasure
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#FlowMeasure> rdf:type owl:Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterMeasure> ,
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasDate> ;
+                                                                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                          owl:onDataRange xsd:dateTimeStamp
+                                                                                                        ] ,
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasUnit> ;
+                                                                                                          owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#FlowUnit> ;
+                                                                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                        ] ,
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasOrigin> ;
+                                                                                                          owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Flowmeter> ;
+                                                                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                        ] ,
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasValue> ;
+                                                                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                          owl:onDataRange xsd:float
+                                                                                                        ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#FlowUnit
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#FlowUnit> rdf:type owl:Class ;
+                                                                                     
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#MeasureUnit> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Flowmeter
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Flowmeter> rdf:type owl:Class ;
+                                                                                      
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterSensor> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Generator
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Generator> rdf:type owl:Class ;
+                                                                                      
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ElectricDevice> ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                        owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Tank> ;
+                                                                                                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                      ] ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                        owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ElectricStateSensor> ;
+                                                                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                      ] ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                        owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#AirQualitySensor> ;
+                                                                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                      ] ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                        owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Thermometer> ;
+                                                                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                      ] ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                        owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Sonometer> ;
+                                                                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                      ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Hygrometer
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Hygrometer> rdf:type owl:Class ;
+                                                                                       
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#AirSensor> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Incident
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Incident> rdf:type owl:Class ;
+                                                                                     
+                                                                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#concern> ;
+                                                                                                       owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Device> ;
+                                                                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                     ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#IndustrialClient
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#IndustrialClient> rdf:type owl:Class ;
+                                                                                             
+                                                                                             rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Client> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Installation
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Installation> rdf:type owl:Class ;
+                                                                                         
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Intervention> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Intervention
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Intervention> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#IntrusionAlert
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#IntrusionAlert> rdf:type owl:Class ;
+                                                                                           
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#EnvironmentAlert> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#LeakAlert
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#LeakAlert> rdf:type owl:Class ;
+                                                                                      
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Alert> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#LevelMeter
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#LevelMeter> rdf:type owl:Class ;
+                                                                                       
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Sensor> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#MalfunctionAlert
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#MalfunctionAlert> rdf:type owl:Class ;
+                                                                                             
+                                                                                             rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Alert> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Manager
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Manager> rdf:type owl:Class ;
+                                                                                    
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Staff> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Manometer
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Manometer> rdf:type owl:Class ;
+                                                                                      
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterSensor> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Measure
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Measure> rdf:type owl:Class ;
+                                                                                    
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Intervention> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#MeasureUnit
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#MeasureUnit> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Measurement
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Measurement> rdf:type owl:Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasUnit> ;
+                                                                                                          owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#MeasureUnit> ;
+                                                                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                        ] ,
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasDate> ;
+                                                                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                          owl:onDataRange xsd:dateTimeStamp
+                                                                                                        ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Meter
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Meter> rdf:type owl:Class ;
+                                                                                  
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterSensor> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#NoiseMeasure
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#NoiseMeasure> rdf:type owl:Class ;
+                                                                                         
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Measurement> ,
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#concern> ;
+                                                                                                           owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Sonometer> ;
+                                                                                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                         ] ,
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasUnit> ;
+                                                                                                           owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#NoiseUnit> ;
+                                                                                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                         ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#NoiseUnit
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#NoiseUnit> rdf:type owl:Class ;
+                                                                                      
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#MeasureUnit> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#OverConsumption
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#OverConsumption> rdf:type owl:Class ;
+                                                                                            
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Claim> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#OverflowSensor
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#OverflowSensor> rdf:type owl:Class ;
+                                                                                           
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#EnvironmentSensor> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Photometer
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Photometer> rdf:type owl:Class ;
+                                                                                       
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterQualitySensor> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Pipe
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Pipe> rdf:type owl:Class ;
+                                                                                 
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterDevice> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PresenceSensor
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PresenceSensor> rdf:type owl:Class ;
+                                                                                           
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#EnvironmentSensor> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PressureAlert
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PressureAlert> rdf:type owl:Class ;
+                                                                                          
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterAlert> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PressureLimiter
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PressureLimiter> rdf:type owl:Class ;
+                                                                                            
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Controler> ,
+                                                                                                            [ rdf:type owl:Restriction ;
+                                                                                                              owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                              owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Flowmeter> ;
+                                                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                            ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PressureMeasure
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PressureMeasure> rdf:type owl:Class ;
+                                                                                            
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterMeasure> ,
+                                                                                                            [ rdf:type owl:Restriction ;
+                                                                                                              owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasValue> ;
+                                                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                              owl:onDataRange xsd:float
+                                                                                                            ] ,
+                                                                                                            [ rdf:type owl:Restriction ;
+                                                                                                              owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasUnit> ;
+                                                                                                              owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PressureUnit> ;
+                                                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                            ] ,
+                                                                                                            [ rdf:type owl:Restriction ;
+                                                                                                              owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasOrigin> ;
+                                                                                                              owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Manometer> ;
+                                                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                            ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PressureUnit
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PressureUnit> rdf:type owl:Class ;
+                                                                                         
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#MeasureUnit> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PrivateSector
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PrivateSector> rdf:type owl:Class ;
+                                                                                          
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Sector> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PublicSector
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PublicSector> rdf:type owl:Class ;
+                                                                                         
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Sector> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Pump
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Pump> rdf:type owl:Class ;
+                                                                                 
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ElectricDevice> ,
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                   owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ElectricStateSensor> ;
+                                                                                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                 ] ,
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                   owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Thermometer> ;
+                                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                 ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PumpingGroup
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PumpingGroup> rdf:type owl:Class ;
+                                                                                         
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Controler> ,
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                           owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Sonometer> ;
+                                                                                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                         ] ,
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                           owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PresenceSensor> ;
+                                                                                                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                         ] ,
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                           owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Thermometer> ;
+                                                                                                           owl:qualifiedCardinality "3"^^xsd:nonNegativeInteger
+                                                                                                         ] ,
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                           owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Flowmeter> ;
+                                                                                                           owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                                                                                         ] ,
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                           owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ElectricPowerageSensor> ;
+                                                                                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                         ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PumpingStation
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PumpingStation> rdf:type owl:Class ;
+                                                                                           
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PumpingGroup> ,
+                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                             owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                             owl:someValuesFrom <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Reservoir>
+                                                                                                           ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Replacement
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Replacement> rdf:type owl:Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Intervention> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Reservoir
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Reservoir> rdf:type owl:Class ;
+                                                                                      
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterDevice> ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                        owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ElectricPowerageSensor> ;
+                                                                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                      ] ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                        owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Turbidimeter> ;
+                                                                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                      ] ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                        owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Thermometer> ;
+                                                                                                        owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                                                                                      ] ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                        owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Flowmeter> ;
+                                                                                                        owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                                                                                      ] ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                        owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Manometer> ;
+                                                                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                      ] ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                        owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#OverflowSensor> ;
+                                                                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                      ] ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                        owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Hygrometer> ;
+                                                                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                      ] ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                        owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Photometer> ;
+                                                                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                      ] ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                        owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PresenceSensor> ;
+                                                                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                      ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Sector
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Sector> rdf:type owl:Class ;
+                                                                                   
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterDevice> ,
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                     owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Pipe> ;
+                                                                                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                   ] ,
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                     owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Valve> ;
+                                                                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                   ] ,
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                     owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Meter> ;
+                                                                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                   ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Sensor
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Sensor> rdf:type owl:Class ;
+                                                                                   
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#ElectricDevice> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Sonometer
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Sonometer> rdf:type owl:Class ;
+                                                                                      
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Sensor> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#SpeedUnit
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#SpeedUnit> rdf:type owl:Class ;
+                                                                                      
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#MeasureUnit> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Staff
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Staff> rdf:type owl:Class ;
+                                                                                  
+                                                                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#report> ;
+                                                                                                    owl:someValuesFrom <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Incident>
+                                                                                                  ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#StateSensor
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#StateSensor> rdf:type owl:Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#EnvironmentSensor> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Tank
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Tank> rdf:type owl:Class ;
+                                                                                 
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Device> ,
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                   owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#LevelMeter> ;
+                                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                 ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#TemperatureMeasure
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#TemperatureMeasure> rdf:type owl:Class ;
+                                                                                               
+                                                                                               rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Measurement> ,
+                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                 owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasOrigin> ;
+                                                                                                                 owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Thermometer> ;
+                                                                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                               ] ,
+                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                 owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasUnit> ;
+                                                                                                                 owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#TemperatureUnit> ;
+                                                                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                               ] ,
+                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                 owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasValue> ;
+                                                                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                                 owl:onDataRange xsd:float
+                                                                                                               ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#TemperatureUnit
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#TemperatureUnit> rdf:type owl:Class ;
+                                                                                            
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#MeasureUnit> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Thermometer
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Thermometer> rdf:type owl:Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Sensor> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Turbidimeter
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Turbidimeter> rdf:type owl:Class ;
+                                                                                         
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterQualitySensor> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#UnSafeEnvironmentAlert
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#UnSafeEnvironmentAlert> rdf:type owl:Class ;
+                                                                                                   
+                                                                                                   rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#EnvironmentAlert> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Valve
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Valve> rdf:type owl:Class ;
+                                                                                  
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterDevice> ,
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#isComposedOf> ;
+                                                                                                    owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#StateSensor> ;
+                                                                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                  ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#VolumeMeasure
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#VolumeMeasure> rdf:type owl:Class ;
+                                                                                          
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterMeasure> ,
+                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasOrigin> ;
+                                                                                                            owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Meter> ;
+                                                                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                          ] ,
+                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasUnit> ;
+                                                                                                            owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#VolumeUnit> ;
+                                                                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                          ] ,
+                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#hasValue> ;
+                                                                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                            owl:onDataRange xsd:float
+                                                                                                          ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#VolumeUnit
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#VolumeUnit> rdf:type owl:Class ;
+                                                                                       
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#MeasureUnit> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterAlert
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterAlert> rdf:type owl:Class ;
+                                                                                       
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Alert> ,
+                                                                                                       [ rdf:type owl:Restriction ;
+                                                                                                         owl:onProperty <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#concern> ;
+                                                                                                         owl:onClass <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterDevice> ;
+                                                                                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                                                       ] .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterDevice
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterDevice> rdf:type owl:Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Device> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterMeasure
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterMeasure> rdf:type owl:Class ;
+                                                                                         
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Measurement> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterQualitySensor
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterQualitySensor> rdf:type owl:Class ;
+                                                                                               
+                                                                                               rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterSensor> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterSensor
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterSensor> rdf:type owl:Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Sensor> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterShortage
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterShortage> rdf:type owl:Class ;
+                                                                                          
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Claim> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterThermometer
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterThermometer> rdf:type owl:Class ;
+                                                                                             
+                                                                                             rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Thermometer> ,
+                                                                                                             <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterSensor> .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterTower
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#WaterTower> rdf:type owl:Class ;
+                                                                                       
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#Reservoir> .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#bar
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#bar> rdf:type <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PressureUnit> ,
+                                                                                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#celsius
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#celsius> rdf:type <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#TemperatureUnit> ,
+                                                                                             owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#cubicMeter
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#cubicMeter> rdf:type <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#VolumeUnit> ,
+                                                                                                owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#cubicMeterPerSecond
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#cubicMeterPerSecond> rdf:type <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#FlowUnit> ,
+                                                                                                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#decibel
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#decibel> rdf:type <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#NoiseUnit> ,
+                                                                                             owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#fahrenheit
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#fahrenheit> rdf:type <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#TemperatureUnit> ,
+                                                                                                owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#joule
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#joule> rdf:type <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#EnergyUnit> ,
+                                                                                           owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#kelvin
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#kelvin> rdf:type <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#TemperatureUnit> ,
+                                                                                            owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#litre
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#litre> rdf:type <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#VolumeUnit> ,
+                                                                                           owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#litrePerHour
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#litrePerHour> rdf:type <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#FlowUnit> ,
+                                                                                                  owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#metersPerSecond
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#metersPerSecond> rdf:type <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#SpeedUnit> ,
+                                                                                                     owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#pascal
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#pascal> rdf:type <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#PressureUnit> ,
+                                                                                            owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#turnsPerMinute
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#turnsPerMinute> rdf:type <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#SpeedUnit> ,
+                                                                                                    owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#watt
+
+<http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#watt> rdf:type <http://www.semanticweb.org/fcalvier/ontologies/2016/5/untitled-ontology-7#EnergyUnit> ,
+                                                                                          owl:NamedIndividual .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+
