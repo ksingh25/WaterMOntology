@@ -1,15 +1,11 @@
 # WaterMOntology
-This project contains the WaterM ontology files and documentations
-Homepage:
+This project contains the WaterM ontology files and documentations developped during 
+the ITEA3 project [WATERM](https://itea3.org/project/water-m.html)
 
-https://w3id.org/waterm --> SomelinkHere
-Source:
-
-Somelink Here
 
 Contacts:
+François Calvier 
+[Kamal Singh](https://sites.google.com/site/kamalsingh25/)
+Abderrahmen Kammoun
+Amro Najjar 
 
-François Calvier Add address here 
-Kamal Singh kamal.singh@univ-st-etienne.fr
-Abderrahmen Kammoun abderrahmen.kammoun@univ-st-etienne.fr
-Amro Najjar  mhd.amro.najjar@univ-st-etienne.fr
